@@ -62,7 +62,7 @@ class MarsViewModel(private val marsPhotosRepository: MarsPhotosRepository) : Vi
             marsUiState = try {
                 val listResult = marsPhotosRepository.getMarsPhotos()
                 MarsUiState.Success(
-                    "Success: ${listResult.size} Mars photos retrieved"
+                    "Éxito: Se recuperaron ${listResult.size} fotos de Marte"
                 )
             } catch (e: IOException) {
                 MarsUiState.Error
